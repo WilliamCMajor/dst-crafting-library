@@ -1,7 +1,15 @@
 <?php
 
 // Connect to DB: Since all files depend on this, this will be included in our header, which is then included in all files.
-$con = mysqli_connect("localhost", "she8","ZoWa89pmsu9qD5o","she8_catalog_dst");
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+$server = $url["cleardb-rigid-79865"];
+$username = $url["b64052e31f6b37"];
+$password = $url["cd838b52"];
+$db = substr($url["heroku_eaff8d6d28b5bc3"], 1);
+
+$con = new mysqli($server, $username, $password, $db);
+//$con = mysqli_connect("localhost", "she8","ZoWa89pmsu9qD5o","she8_catalog_dst");
 
 // Check connection
 if (mysqli_connect_errno()) {
@@ -21,7 +29,7 @@ if (mysqli_connect_errno()) {
 // 	We use a constant (basically the same as a variable (stores a value)) to set the Base URL. We will use this to resolve all links as absolute URL's instead of relative URL's. If we do this correct, then we will not have any troubles pathing to all our files.
   // Make sure the path starts with http:// and ends with the trailing slash
   // If you copy/paste this script into other projects and fail to change this, then you may have links going back to the former project. Copy/Paste/FAIL !
-  define("BASE_URL", "http://she8.dmitstudent.ca/dmit2025/catalog-dst/");
+  define("BASE_URL", "https://dst-carfting-library.herokuapp.com/");
 
 
   // Your App Name
