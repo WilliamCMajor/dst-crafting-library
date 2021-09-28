@@ -1,5 +1,5 @@
 # dst-crafting-library
-site URL: https://dst-carfting-library.herokuapp.com/
+Site URL: https://dst-carfting-library.herokuapp.com/
 
 CRUD (create, read, update, delete) application developed by PHP and MySQL.
 
