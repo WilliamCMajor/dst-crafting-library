@@ -8,7 +8,7 @@ $username = $url["b64052e31f6b37"];
 $password = $url["cd838b52"];
 $db = substr($url["heroku_eaff8d6d28b5bc3"], 1);
 
-$con = new mysqli($server, $username, $password, $db);
+$con = mysqli_connect($server, $username, $password, $db);
 //$con = mysqli_connect("localhost", "she8","ZoWa89pmsu9qD5o","she8_catalog_dst");
 
 // Check connection
