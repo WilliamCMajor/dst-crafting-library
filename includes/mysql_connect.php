@@ -6,12 +6,12 @@
 // development connection Heroku ClearDB
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-$server = $url["us-cdbr-east-04.cleardb.com"];
-$username = $url["b64052e31f6b37"];
-$password = $url["cd838b52"];
-$db = substr($url["heroku_eaff8d6d28b5bc3.craft"], 1);
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
 
-$con = mysqli_connect($server, $username, $password, $db);
+$con = new mysqli($server, $username, $password, $db);
 
 // Check connection
 if (mysqli_connect_errno()) {
