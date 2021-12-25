@@ -3,7 +3,7 @@
     $userName = $_POST['username'];
     $pswd = $_POST['password'];
     //authenticate user
-    if(($userName == "she8") && ($pswd == "2020"))
+    if(($userName == "she8") && ($pswd == "dsthsq"))
     {
         session_start(); //start a session
         $_SESSION['dwq2as1sa'] = session_id(); //name of the session
