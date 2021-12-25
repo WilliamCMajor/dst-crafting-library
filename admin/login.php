@@ -8,7 +8,7 @@
         session_start(); //start a session
         $_SESSION['dwq2as1sa'] = session_id(); //name of the session
         if(isset($_POST['submit'])){
-            header("Location: insert.php");
+            header("Location: " . BASE_URL . "admin/insert.php");
         }
         
     }else{
