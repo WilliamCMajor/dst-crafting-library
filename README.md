@@ -1,5 +1,5 @@
 # dst-crafting-library
-Site URL: https://dst-carfting-library.herokuapp.com/
+Site URL: https://dst-crafting-library.herokuapp.com/
 
 ## Introduction: 
 
